@@ -1,0 +1,27 @@
+acertos = float(input('Quantas você acertou? \nR:'))
+acp = input('Você teve acréscimo de escolaridade pública? y/n\nR:')
+acd = input('E de decendencia (ex: Afrodescendência, Indigena, etc...)? y/n\nR:')
+
+if acp in 'yY' and acd in 'nN':
+
+    print('-' * 40)
+    print(f'Você teve no total {acertos + (acertos * 0.1)} pontos')
+    print('-' * 40)
+
+if acp in 'nN' and acd in 'yY':
+
+    print('-' * 40)
+    print(f'Você teve no total {acertos + (acertos * 0.03)} pontos')
+    print('-' * 40)
+
+if acp in 'yY' and acd in 'yY':
+
+    print('-' * 40)
+    print(f'Você teve no total {acertos + (acertos * 0.13)} pontos')
+    print('-' * 40)
+
+if acp in 'nN' and acd in 'nN':
+
+    print('-' * 40)
+    print(f'Você teve no total {acertos} pontos')
+    print('-' * 40)
