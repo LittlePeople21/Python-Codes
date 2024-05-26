@@ -1,0 +1,21 @@
+kmh = float(input('Quantos km/h tu tava andando cidadão?\nR:'))
+
+if kmh > 80:
+    
+    kmh2 = kmh - 80
+    
+    print('-' * 80)
+    print(f'Cidadão, você estava a {kmh}km/h em uma via de 80km/h!') 
+    
+    kmmulta = kmh2 * 7
+    
+    print(f'Por você estar a {kmh2}km/h acima do limite, sua multa será de: R${kmmulta:.2f}')
+    print('-' * 80)
+    
+if kmh == 80:
+    
+    print('No limite em cidadão, vai com cautela aí!')       
+    
+if kmh < 80:
+    
+    print('Abaixo do limite, pode ir suave cidadão')
