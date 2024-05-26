@@ -1,0 +1,11 @@
+numa = float(input('Qual o primeiro número?\nR: '))
+numb = float(input('Qual o segundo número?\nR: '))
+numc = float(input('Qual o terceiro número?\nR: '))
+
+numeros = [numa, numb, numc]
+numeroscres = sorted(numeros)
+
+print('-' * 40)
+print(f'O maior: {numeroscres[-1]}')
+print(f'O menor: {numeroscres[0]}')
+print('-' * 40)
