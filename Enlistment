@@ -1,0 +1,19 @@
+ano = int(input('Quando tu nasceu guerreiro?\nR: '))
+
+idade = 2024 - ano
+
+if idade > 18:
+    
+    idade2 = idade - 18
+    
+    print(f'Tu tem {idade} anos, já passou {idade2} anos do alistamento!')
+    
+elif idade == 18:
+    
+    print('Tá na hora de se alistar em!')
+    
+else:
+    
+    idade2 = 18 - idade
+    
+    print(f'Tu tem {idade} anos, ainda faltam {idade2} anos para vc se alistar!')
