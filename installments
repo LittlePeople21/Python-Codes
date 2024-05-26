@@ -1,0 +1,22 @@
+cvalor = float(input('Qual o valor da casa chefia? \nR: '))
+svalor = float(input('Quanto que tu ganha irmão? \nR: '))
+pquant = int(input('Em quantos anos tu vai pagar? \nR: '))
+
+pquant = pquant*12
+presta = cvalor/pquant
+
+svalor2 = svalor*30/100
+
+if presta > svalor2:
+    
+    print('-'*80)
+    print('Foi mal, mas n posso autorizar esse financiamento!')
+    print(f'Cada prestação é {presta:.2f} e vc pode pagar no max {svalor2:.2f} por prestação')
+    print('-'*80)
+    
+elif presta < svalor2:
+    
+    print('-'*80)
+    print('Posso autorizar esta compra!')
+    print(f'Cada prestação é {presta:.2f} e vc pode pagar {svalor2:.2f} por mês')
+    print('-'*80)
