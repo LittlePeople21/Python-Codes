@@ -1,0 +1,20 @@
+num = int(input('Digite o primeiro valor.\nR: '))
+num2 = int(input('Digite o segundo valor.\nR: '))
+
+if num > num2:
+    
+    print('-'*80)
+    print(f'O primeiro valor cujo é {num} é o maior')
+    print('-'*80)
+    
+elif num2 > num:
+    
+    print('-'*80)
+    print(f'O segundo valor cujo é {num2} é o maior')
+    print('-'*80)
+    
+else:
+    
+    print('-'*80)
+    print('Não tem número maior, pois eles são iguais!')
+    print('-'*80)
