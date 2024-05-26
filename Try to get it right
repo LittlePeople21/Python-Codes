@@ -1,0 +1,17 @@
+print('Pensando em um número entre 0 e 5...')
+time.sleep(1.5)
+print('hmmm...')
+time.sleep(1.5)
+print('Pensei!')
+numx = random.randint(0, 5)
+time.sleep(1.5)
+
+numdigit = int(input('Qual número eu pensei?\nR: '))
+
+if numdigit == numx:
+    
+    print(f'Parabéns! Você acertou que eu estava pensando no número {numx}!')
+    
+else:
+    
+    print(f'Que pena, você errou, não era {numdigit}, era na verdade {numx}!')
