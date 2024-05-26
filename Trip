@@ -1,0 +1,15 @@
+kmroda = float(input('Quantos kms é sua viagem tio?\nR: '))
+
+print('-' * 80)
+if kmroda > 200:
+    
+    pagamento = kmroda * 0.45
+    
+    print(f'A viagem custará R${pagamento:.2f}')
+    
+else:
+    
+    pagamento2 = kmroda * 0.50
+    
+    print(f'A viagem custará R${pagamento2:.2f}')
+print('-' * 80)
