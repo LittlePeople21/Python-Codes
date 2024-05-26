@@ -1,0 +1,13 @@
+numero = int(input('Qual o número chefia?\nR: '))
+
+resto = numero % 2
+
+print('-' * 80)
+if resto == 0:
+    
+    print(f'O número {numero} é par')
+    
+else:
+    
+    print(f'O número {numero} é impar')
+print('-' * 80)
