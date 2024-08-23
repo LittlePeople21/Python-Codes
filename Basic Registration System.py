@@ -6,7 +6,7 @@ def title():
     print('-'*80)
 
 def opc():
-    opcc = int(input('Bem Vindo ao banco DEV, o que você gostaria hoje?\n1. Cadastrar\n2. Visualizar cadastros\n3. Excluir cadastros\n4. Criar arquivo de cadastros\n5. Encerrar programa\nR:'))
+    opcc = int(input('Bem Vindo ao banco DEV, o que você gostaria hoje?\n1. Cadastrar\n2. Visualizar cadastros\n3. Excluir cadastros\n4. Criar arquivo de cadastros\n5. Encerrar programa\nR: '))
     if opcc == 1:
         cadastrar()
     if opcc == 2:
@@ -32,25 +32,47 @@ def opc():
         print('\nObrigado pela preferência! Volte sempre!')
         sleep(1)
         print('Encerrando...')
+        sleep(1)
         return 0
 
 def cadastrar():
+    try:
+        open('cadastros.txt', 'r')
+    except:
+        print('\n\033[0;33mPrimeiro crie um arquivo para cadastros!!!\033[0;m\n')
+        opc()
     opcqt = int(input('\nQuantas pessoas você deseja cadastrar?\nR: '))
     for qt in range(0, opcqt):
-        x = str(input('Nome: '))
+        x = input('Nome: ')
+        if not x.isalpha():
+            while True:
+                print('\n\033[0;33mDigite apenas letras para o nome.\033[0;m\n')
+                x = input('Nome: ')
+                if x.isalpha():
+                    break
         y = str(input('Idade: '))
+        if not y.isnumeric():
+            while True:
+                print('\n\033[0;33mDigite apenas números para idade.\033[0;m\n')
+                y = input('Idade: ')
+                if y.isnumeric():
+                    break
         with open('cadastros.txt', 'a') as arquivo:
             arquivo.write(x)
             arquivo.write(';')
             arquivo.write(y)
             arquivo.write(':')
-        print('Cadastrado!\n')
-    print(f'Feito! Obrigado pelos {opcqt} cadastro(s)!')
+        print('\033[0;32mCadastrado!\033[0;m\n')
+    print(f'Feito! Obrigado pelos {opcqt} cadastro(s)!\n')
     opc()
 
 def visualizar():
-    with open('cadastros.txt', 'r') as arquivo:
-        texto = arquivo.read()
+    try:  
+        with open('cadastros.txt', 'r') as arquivo:
+            texto = arquivo.read()
+    except:
+        print('\n\033[0;33mPrimeiro crie um arquivo para cadastros!!!\033[0;m\n')
+        opc()
     texto = texto.split(':')
     print('\nNome'.ljust(30), 'Idade'.rjust(30))
     print('-'*60)
