@@ -1,3 +1,5 @@
+from time import sleep
+
 def title():
     print('-'*80)
     print('BANCO DEV'.center(80))
@@ -20,6 +22,17 @@ def opc():
         if opcao in 'nN':
             print('\nOk!\n')
             opc()
+    if opcc == 4:
+        open('cadastros.txt', 'x')
+        print('\nCriando "cadastros.txt"...\n')
+        sleep(1)
+        print('\nCriado!\n')
+        opc()
+    if opcc == 5:
+        print('\nObrigado pela preferência! Volte sempre!')
+        sleep(1)
+        print('Encerrando...')
+        return 0
 
 def cadastrar():
     opcqt = int(input('\nQuantas pessoas você deseja cadastrar?\nR: '))
