@@ -12,7 +12,7 @@ def opc():
     if opcc == 2:
         visualizar()
     if opcc == 3:
-        opcao = str(int('\nVocê tem certeza que quer excluir os cadastros? [Y/N]\nR: '))
+        opcao = str(input('\nVocê tem certeza que quer excluir os cadastros? [Y/N]\nR: '))
         if opcao in 'yY':
             with open('cadastros.txt', 'w+') as arquivo:
                 arquivo.write('')
